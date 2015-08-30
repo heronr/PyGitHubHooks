@@ -3,3 +3,6 @@ __pycache__
 
 #ignore the .vs folder
 .vs
+
+#ignore ngrok.exe
+ngrok.exe
