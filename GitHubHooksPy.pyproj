@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{aa2f2c02-6168-4fcb-bc29-546faf2ec3f5}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>hooks_handler.py</StartupFile>
+    <StartupFile>server.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
