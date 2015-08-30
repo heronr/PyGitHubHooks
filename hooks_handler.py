@@ -5,17 +5,11 @@ from git_hub_events import *
 
 class GitHubHooksHandler(http.server.BaseHTTPRequestHandler):
 
-    def finish_response(response_code):
+    def finish_response(self, response_code):
         self.send_response(response_code)
         self.send_header('Content-Type', 'text/html')
         self.end_headers()
 
-    #
-    # Handler for the get request
-    #
-    def do_GET(self):
-        self.finish_response(http.client.OK)
-        return None
     #
     # Handler for the post request
     #     
@@ -38,13 +32,12 @@ class GitHubHooksHandler(http.server.BaseHTTPRequestHandler):
         content = self.rfile.read(content_length)
         content_str = content.decode('utf8')
         json_object = json.loads(content_str)
-        print(json_object)
         switcher = {
             'push' : HandlePushEvent,
             'ping' : HandlePingEvent,
         }
-        method = switcher.get(real_type.name, lambda: False)
-        method_result = method()
+        method = switcher.get(real_type.name, lambda x: False)
+        method_result = method(json_object)
         if method_result:
             self.finish_response(http.client.OK)
         else:
