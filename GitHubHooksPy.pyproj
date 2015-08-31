@@ -27,6 +27,12 @@
     <Compile Include="hooks_handler.py" />
     <Compile Include="merge_server.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EventExamples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EventExamples\SamplePushEvent.txt" />
+  </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
 </Project>
