@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{aa2f2c02-6168-4fcb-bc29-546faf2ec3f5}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>server.py</StartupFile>
+    <StartupFile>merge_server.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -25,7 +25,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="hooks_handler.py" />
-    <Compile Include="server.py" />
+    <Compile Include="merge_server.py" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
